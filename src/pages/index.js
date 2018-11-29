@@ -2,6 +2,7 @@ import React from "react"
 
 import styles from "./index.module.scss"
 import Container from "../components/container"
+import Header from "../components/header"
 console.log(styles)
 
 const User = props => (
@@ -15,8 +16,11 @@ const User = props => (
 )
 
 export default () => (
+    <main>
+    <Header></Header>
     <Container>
         <h1>Richard Hamming on Luck</h1>
+        <img src="assets/images/22-1_11.jpg" alt="main-theme"/>
         <div>
         <p>
             From Richard Hamming’s classic and must-read talk, “
@@ -52,4 +56,5 @@ export default () => (
         excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         />
     </Container>
+    </main>
 )
