@@ -22,6 +22,7 @@
     "react-dom": "^16.5.1",
     "react-typography": "^0.16.13",
     "typography": "^0.16.17",
+    "typography-theme-judah": "^0.16.18",
     "typography-theme-lawton": "^0.15.10"
   }
 }
