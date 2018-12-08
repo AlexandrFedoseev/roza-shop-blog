@@ -6,9 +6,13 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import Section from "../components/section"
 import OffersSection from "../components/offersSection"
+import ConsSection from "../components/consSection"
 export default () => (
     <main>
     <Header></Header>
+    <Section title={'Преимущества'}>
+        <ConsSection></ConsSection>
+    </Section>
     <Container>
         <p>
             &laquo;Роза Азора&raquo;&nbsp;&mdash; это известный в&nbsp;Минске и&nbsp;нежно 
@@ -30,7 +34,7 @@ export default () => (
             счастья!
         </p>
     </Container>
-    <Section>
+    <Section title={'Услуги'}>
         <OffersSection></OffersSection>
     </Section>
     <Footer></Footer>

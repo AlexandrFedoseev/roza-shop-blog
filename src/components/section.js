@@ -1,10 +1,10 @@
 import React from "react"
 import sectionStyles from "./section.module.scss"
 
-export default ({ children }) => (
+export default ({ title, children }) => (
     <div className={sectionStyles.container}>
         <h1 className={sectionStyles.sectionTitle}>
-            <a href="#">Услуги</a>
+            <a href="#">{title}</a>
         </h1>
         {children}
     </div>
