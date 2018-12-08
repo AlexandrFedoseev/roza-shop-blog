@@ -3,14 +3,6 @@ import headerStyles from "./header.module.scss"
 
 export default () => (
   <header>
-    <ul className={headerStyles.mainMenu}>
-      <li>Главная</li>
-      <li>О нас</li>
-      <li>Отзывы</li>
-      <li>Оплата и доставка</li>
-      <li>Оформление заказа</li>
-      <li>Контакты</li>
-    </ul>
     <div className={headerStyles.contacts}>
       <div>
         <img width="198" height="52" src="/assets/images/2337_logo.png" alt="logo" title="RozaAzora"/>
@@ -28,7 +20,7 @@ export default () => (
       <div>
         <span className={headerStyles.ws}>вебсайт</span>
         <span className={headerStyles.cs}>в раз&shy;ра&shy;бот&shy;ке<i>...</i></span>
-        <span className={headerStyles.a1}>еще один проект от Сашки</span>
+        <span className={headerStyles.a1}>еще один проект от всей души</span>
       </div>
     </div>
     <div className={headerStyles.welcome} style={{backgroundImage: `url(${"/assets/images/22-1_11.jpg"})`}}>
@@ -40,6 +32,13 @@ export default () => (
             Салон цветов
         </h2>
       </div>
+    </div>
+    <div className={headerStyles.mainMenu}>
+      <a href="#">Главная</a>
+      <a href="#">Услуги</a>
+      <a href="#">Проекты</a>
+      <a href="#">О нас</a>
+      <a href="#">Контакты</a>
     </div>
   </header>
 )

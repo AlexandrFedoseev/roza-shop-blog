@@ -1,9 +1,8 @@
 .container {
-    margin: 3rem auto;
-    padding: 40px 20px;
+    margin: 0 auto;
+    padding: 40px;
     max-width: 1560px;
     @media screen and (min-width: 900px) {
-        padding: 40px 88px;
+        padding: 40px 80px;
     }
-
 }

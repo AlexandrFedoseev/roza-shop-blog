@@ -4,18 +4,8 @@ import styles from "./index.module.scss"
 import Container from "../components/container"
 import Header from "../components/header"
 import Footer from "../components/footer"
-console.log(styles)
-
-const User = props => (
-    <div className={styles.user}>
-        <img src={props.avatar} className={styles.avatar} alt="" />
-        <div className={styles.description}>
-            <h2 className={styles.username}>{props.username}</h2>
-            <p className={styles.excerpt}>{props.excerpt}</p>
-        </div>
-    </div>
-)
-
+import Section from "../components/section"
+import OffersSection from "../components/offersSection"
 export default () => (
     <main>
     <Header></Header>
@@ -40,7 +30,9 @@ export default () => (
             счастья!
         </p>
     </Container>
+    <Section>
+        <OffersSection></OffersSection>
+    </Section>
     <Footer></Footer>
     </main>
-    
 )

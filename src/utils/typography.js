@@ -14,7 +14,7 @@ judahTheme.googleFonts = [
 
 ],
 judahTheme.headerFontFamily = ['Oswald', 'sans-serif'];
-judahTheme.bodyFontFamily = ['Roboto', 'sans-serif'];
+judahTheme.bodyFontFamily = ['-apple-system', 'system-ui', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif'];
 
 const typography = new Typography(judahTheme);
 
