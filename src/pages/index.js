@@ -10,9 +10,9 @@ import ConsSection from "../components/consSection"
 export default () => (
     <main>
     <Header></Header>
-    <Section title={'Преимущества'}>
+    <Container>
         <ConsSection></ConsSection>
-    </Section>
+    </Container>
     <Container>
         <p>
             &laquo;Роза Азора&raquo;&nbsp;&mdash; это известный в&nbsp;Минске и&nbsp;нежно 
