@@ -13,7 +13,7 @@ export default () => (
       </div>
       <div>
         Пр-т Независимости, 186<br/>
-        Мы раьотаем без выходных с 9:00 до 20:00
+        Мы работаем без выходных с 9:00 до 20:00
       </div>
     </div>
     <div className={headerStyles.comingSoon}>

@@ -10,6 +10,9 @@ import ConsSection from "../components/consSection"
 export default () => (
     <main>
     <Header></Header>
+    <Section title={'Услуги'}>
+        <OffersSection></OffersSection>
+    </Section>
     <Container>
         <ConsSection></ConsSection>
     </Container>
@@ -34,9 +37,7 @@ export default () => (
             счастья!
         </p>
     </Container>
-    <Section title={'Услуги'}>
-        <OffersSection></OffersSection>
-    </Section>
+
     <Footer></Footer>
     </main>
 )
