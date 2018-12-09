@@ -37,7 +37,6 @@ export default () => (
       <a href="#">Главная</a>
       <a href="#">Услуги</a>
       <a href="#">Проекты</a>
-      <a href="#">О нас</a>
       <a href="#">Контакты</a>
     </div>
   </header>
