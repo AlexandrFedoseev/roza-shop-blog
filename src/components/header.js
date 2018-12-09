@@ -18,7 +18,7 @@ export default () => (
     </div>
     <div className={headerStyles.comingSoon}>
       <div>
-        <span className={headerStyles.ws}>вебсайт</span>
+        <span className={headerStyles.ws}>веб-сайт</span>
         <span className={headerStyles.cs}>в раз&shy;ра&shy;бот&shy;ке<i>...</i></span>
         <span className={headerStyles.a1}>еще один проект от всей души</span>
       </div>

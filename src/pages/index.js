@@ -7,6 +7,7 @@ import Footer from "../components/footer"
 import Section from "../components/section"
 import OffersSection from "../components/offersSection"
 import ConsSection from "../components/consSection"
+import ContactForm from "../components/ContactForm"
 export default () => (
     <main>
     <Header></Header>
@@ -37,7 +38,9 @@ export default () => (
             счастья!
         </p>
     </Container>
-
+    <Container>
+        <ContactForm></ContactForm>
+    </Container>
     <Footer></Footer>
     </main>
 )

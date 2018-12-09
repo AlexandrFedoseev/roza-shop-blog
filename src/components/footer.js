@@ -15,7 +15,7 @@ export default () => (
             <h3>Контакты</h3>
             <address>
                 <br/>
-                <a href="mailto:info@rozaazora.by">info@rozaazora.by</a><br/><br/>
+                <a href="mailto:rozaazora-shop@yandex.by">rozaazora-shop@yandex.by</a><br/><br/>
                 Беларусь, Минск,<br/>
                 Пр-т Независимости, 186
                 <br/>
@@ -28,7 +28,7 @@ export default () => (
             <h3>&nbsp;</h3>
         </div>
         <div className={footerStyles.ipInfo}>
-            ИП тел.: +375 (29) 336-33-03. Минск 2018.
+            ИП Кузьмук И.В. УНП 193098377 тел.: +375 (29) 336-33-03. Минск 2018.
         </div>
     </div>
 )
