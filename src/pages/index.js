@@ -7,7 +7,7 @@ import Footer from "../components/footer"
 import Section from "../components/section"
 import OffersSection from "../components/offersSection"
 import ConsSection from "../components/consSection"
-import ContactForm from "../components/ContactForm"
+import ContactForm from "../components/contactForm"
 export default () => (
     <main>
     <Header></Header>

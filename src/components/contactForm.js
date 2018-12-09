@@ -4,7 +4,7 @@ import contactFormStyles from "./contactForm.module.scss"
 export default ({ children }) => (
     <div style={{marginBottom: '40px'}}>
         <h4>Заказать букет</h4>
-        <form name="ContactForm" method="post"><input type="hidden" name="form-name" value="ContactForm" />
+        <form name="ContactForm" method="post" data-netlify="true"><input type="hidden" name="form-name" value="ContactForm" />
             <div className={contactFormStyles.form}>
                 <div className={contactFormStyles.formInputs}>
                     <div>
