@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import Header from "../components/header"
 import Section from "../components/section"
 import Footer from "../components/footer"
+import Container from "../components/container"
+import ContactForm from "../components/contactForm"
 
 export default function Template({
   data,
@@ -17,6 +19,9 @@ export default function Template({
         <Section title={frontmatter.title}>
             <div dangerouslySetInnerHTML={{ __html: html }} />
         </Section>
+        <Container>
+          <ContactForm></ContactForm>
+      </Container>
         <Footer></Footer>
     </main>
   )
