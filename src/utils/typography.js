@@ -1,8 +1,8 @@
 import Typography from "typography"
 
-import judahTheme from "typography-theme-judah"
+import parnassusTheme from "typography-theme-parnassus"
 
-judahTheme.googleFonts = [
+parnassusTheme.googleFonts = [
     {
         name: 'Roboto',
         styles: ['400'],
@@ -13,9 +13,9 @@ judahTheme.googleFonts = [
     },
 
 ],
-judahTheme.headerFontFamily = ['Oswald', 'sans-serif'];
-judahTheme.bodyFontFamily = ['-apple-system', 'system-ui', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif'];
+parnassusTheme.headerFontFamily = ['Oswald', 'sans-serif'];
+parnassusTheme.bodyFontFamily = ['-apple-system', 'system-ui', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif'];
 
-const typography = new Typography(judahTheme);
+const typography = new Typography(parnassusTheme);
 
 export default typography

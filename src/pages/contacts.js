@@ -7,7 +7,7 @@ import Section from "../components/section"
 
 export default () => (
     <main>
-        <Header image={"/assets/images/22-1_11.jpg"}></Header>
+        <Header title={'Контакты'}  image={"/assets/images/22-1_11.jpg"}></Header>
             <Section title={'Контакты'}></Section>
         <Footer></Footer>
     </main>

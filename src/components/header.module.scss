@@ -1,8 +1,12 @@
 .contacts {
-    max-width: 1480px;
+    padding: 0 20px;
+    max-width: 1560px;
     margin: 0 auto;
-    padding: 16px;
-    color: #121212;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 900px) {
+        padding: 0 80px;
+    }
 
     img {
         display: inline-block;
@@ -10,10 +14,52 @@
         margin: 0;
     }
 
-    div {
-        display: inline-block;
-        vertical-align: middle;
-        padding: 16px 32px;
+    & > div {
+        padding: 16px 0;
+        white-space: nowrap;
+        width: 100%;
+        @media screen and (min-width: 500px) {
+            &.phones {
+                width: calc((100% - 44px - 198px - 40px));
+            }
+        }
+        @media screen and (min-width: 900px) {
+            &.phones, &.location {
+                width: calc((100% - 44px - 198px) / 2);
+            }
+        }
+        font-size: 0;
+        text-align: center;
+        .center-in-box {
+            display: inline-block;
+            font-size: 16px;
+        }
+        .icon {
+            display: block;
+            width: 40px;
+            height: 40px;
+            padding: 10px 0;
+            box-sizing: content-box;
+            float: left;
+            transform: rotate(180deg);
+        }
+        .block-content {
+            overflow: hidden;
+            padding-left: 10px;
+        }
+        .small-text {
+            font-size: 14px;
+            color: #666;
+            white-space: nowrap;
+        }
+    }
+    & > div:first-child {
+        width: 198px;
+        box-sizing: content-box;
+    }
+    & > div:last-child {
+        width: 44px;
+        box-sizing: content-box;
     }
 
     &:after {
@@ -29,6 +75,32 @@
     background-size: cover;
     position: relative;
 
+    a {
+        display: block;
+        box-sizing: content-box;
+        width: 240px;
+        color: #fff;
+        text-align: center;
+        font-family: Oswald,sans-serif;
+        text-transform: uppercase;
+        left: 50%;
+        font-size: 24px;
+        margin-left: -130px;
+        font-weight: 300;
+        line-height: 30px;
+        padding: 6px 10px;
+        background-color: #343434;
+        -webkit-transition: background-color .4s;
+        transition: background-color .4s;
+        z-index: 1;
+        position: relative;
+        box-shadow: none;
+        top: 30px;
+    }
+    a:hover {
+        border-color: transparent;
+        background-color: hsla(0,0%,100%,.4);
+    }
     &:after {
         content: '';
         display: block;
@@ -83,6 +155,7 @@
         text-align: center;
         position: relative;
         font-size: 32px;
+        font-weight: 300;
         color: #fff;
         text-transform: uppercase;
         @media screen and (min-width: 900px) {
@@ -90,45 +163,6 @@
         }
     }
 }
-
-.coming-soon {
-    padding: 58px 0;
-    background-color: #232332;
-    color: #ffffff;
-    text-align: center;
-    
-    
-    div {
-        display: inline-block;
-        max-width: 385px;
-        @media screen and (min-width: 900px) {
-            max-width: none;
-        }
-    }
-    span {
-        text-align: left;
-        display: block;
-        text-transform: uppercase;
-        line-height: 1;
-    }
-}
-.ws {
-    font-size: 20px;
-    padding-left: 5px;
-}
-.cs {
-    font-size: 90px;
-
-    i {
-        color: red;
-    }
-}
-span.a1 {
-    font-size: 16px;
-    padding-right: 5px;
-    text-align: right;
-}
-
 
 .main-menu {
     display: none;
@@ -155,6 +189,7 @@ span.a1 {
         border-bottom: 1px solid transparent;
         color: #666;
         margin: 0;
+        box-shadow: none;
 
         &:hover {
             color: #201921;

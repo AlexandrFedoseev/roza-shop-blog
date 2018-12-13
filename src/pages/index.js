@@ -8,15 +8,20 @@ import Section from "../components/section"
 import OffersSection from "../components/offersSection"
 import ConsSection from "../components/consSection"
 import ContactForm from "../components/contactForm"
+import WorksGallery from "../components/works"
+
 export default () => (
     <main>
-    <Header image={"/assets/images/22-1_11.jpg"}></Header>
-    <Section title={'Услуги'}>
+    <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={"/assets/images/22-1_11.jpg"}></Header>
+    <Section title={'Что мы предлагаем'}>
         <OffersSection></OffersSection>
     </Section>
-    <Container>
+    <Section title={'Как выглядят наши работы'}>
+    </Section>
+    <WorksGallery></WorksGallery>
+    <Section title={'Почему именно "Роза Азора"'}>
         <ConsSection></ConsSection>
-    </Container>
+    </Section>
     <Container>
         <p>
             &laquo;Роза Азора&raquo;&nbsp;&mdash; это известный в&nbsp;Минске и&nbsp;нежно 
@@ -38,9 +43,12 @@ export default () => (
             счастья!
         </p>
     </Container>
-    <Container>
+    <Section title={'Остались вопросы?'}>
         <ContactForm></ContactForm>
-    </Container>
+    </Section>
+    <Section title={'Присоединяйтесь к нам в instagram'}>
+        instagram
+    </Section>
     <Footer></Footer>
     </main>
 )

@@ -4,16 +4,18 @@
     width: 36px;
     height: 36px;
     right: 30px;
-    top: 30px;
+    top: 22px;
     z-index: 100;
     font-size: 18px;
     padding: 4px;
     text-transform: uppercase;
     line-height: 24px;
     box-sizing: content-box;
+    margin-left: auto;
     cursor: default;
     @media screen and (min-width: 900px) {
-        position: absolute;
+        position: static;
+        margin-top: 8px;
     }
     & span {
         box-sizing: content-box;
@@ -33,6 +35,10 @@
 
 .is-menu.menu-btn {
     right: 35px;
+    position: fixed;
+    @media screen and (min-width: 900px) {
+        right: 79px;
+    }
     & span {
         margin-bottom: 0;
         position: absolute;

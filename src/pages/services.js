@@ -8,7 +8,7 @@ import OffersSection from "../components/offersSection"
 
 export default () => (
     <main>
-        <Header image={"/assets/images/22-1_11.jpg"}></Header>
+        <Header title={'Услуги'} image={"/assets/images/22-1_11.jpg"}></Header>
             <Section title={'Услуги'}>
                 <OffersSection></OffersSection>
             </Section>

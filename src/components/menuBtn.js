@@ -8,14 +8,16 @@ import SiteMenu from "./siteMenu"
 let menuButton = (btn) => {
     btn.addEventListener('click', () => {
         btn.classList.toggle(styles.isMenu);
-        ReactDOM.findDOMNode(btn).parentNode.classList.toggle(headerStyles.isMenu);
+        ReactDOM.findDOMNode(btn).parentNode.parentNode.parentNode.parentNode.classList.toggle(headerStyles.isMenu);
     });
 }
 
 export default (props) => (
-    <div id="menu_btn" className={styles.menuBtn} ref={menuButton}>
-        <span className={styles.top}></span>
-        <span className={styles.center}></span>
-        <span className={styles.bottom}></span>
+    <div >
+        <div id="menu_btn" className={styles.menuBtn} ref={menuButton}>
+            <span className={styles.top}></span>
+            <span className={styles.center}></span>
+            <span className={styles.bottom}></span>
+        </div>
     </div>
 )
