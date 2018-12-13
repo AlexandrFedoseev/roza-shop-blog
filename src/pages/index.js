@@ -16,8 +16,7 @@ export default () => (
     <Section title={'Что мы предлагаем'}>
         <OffersSection></OffersSection>
     </Section>
-    <Section title={'Как выглядят наши работы'}>
-    </Section>
+    <Section title={'Как выглядят наши работы'}></Section>
     <WorksGallery></WorksGallery>
     <Section title={'Почему именно "Роза Азора"'}>
         <ConsSection></ConsSection>

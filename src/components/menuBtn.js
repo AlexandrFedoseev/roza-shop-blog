@@ -6,6 +6,7 @@ import headerStyles from "./header.module.scss"
 import SiteMenu from "./siteMenu"
 
 let menuButton = (btn) => {
+    if (btn == null) { return; }
     btn.addEventListener('click', () => {
         btn.classList.toggle(styles.isMenu);
         ReactDOM.findDOMNode(btn).parentNode.parentNode.parentNode.parentNode.classList.toggle(headerStyles.isMenu);
