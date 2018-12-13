@@ -17,8 +17,7 @@ exports.createPages = ({ actions, graphql }) => {
               path,
               image,
               title,
-              info,
-              body
+              info
             }
           }
         }
