@@ -2,8 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 import headerStyles from "./header.module.scss"
 
+import SiteMenu from "./siteMenu"
+import MenuBtn from "./menuBtn"
+
 export default (props) => (
   <header>
+    <MenuBtn></MenuBtn>
+    <div className={headerStyles.siteMenu}>
+      <SiteMenu></SiteMenu>
+    </div>
     <div className={headerStyles.contacts}>
       <div>
         <img width="198" height="52" src="/assets/images/2337_logo.png" alt="logo" title="RozaAzora"/>

@@ -166,3 +166,13 @@ span.a1 {
         }
     }
 }
+
+.site-menu {
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+}
+.is-menu .site-menu {
+    opacity: 1;
+    z-index: 20;
+}

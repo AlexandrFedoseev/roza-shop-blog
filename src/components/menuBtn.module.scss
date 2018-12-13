@@ -1,0 +1,55 @@
+
+.menu-btn {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    right: 30px;
+    top: 30px;
+    z-index: 100;
+    font-size: 18px;
+    padding: 4px;
+    text-transform: uppercase;
+    line-height: 24px;
+    box-sizing: content-box;
+    cursor: default;
+    @media screen and (min-width: 900px) {
+        position: absolute;
+    }
+    & span {
+        box-sizing: content-box;
+        display: block;
+        background-color: #fff;
+        width: 100%;
+        height: 3px;
+        margin-bottom: 10px;
+        transition: background-color 0.4s;
+        border: 1px solid #666;
+    }
+
+    &:hover span {
+        background-color: #232323;
+    }
+}
+
+.is-menu.menu-btn {
+    right: 35px;
+    & span {
+        margin-bottom: 0;
+        position: absolute;
+        background-color: #232323;
+    }
+
+    & .top {
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -5px;
+    }
+    & .bottom {
+        transform: rotate(-45deg);
+        top: 50%;
+        margin-top: -5px;
+    }
+    & .center {
+        display: none;
+    }
+}
