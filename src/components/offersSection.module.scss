@@ -26,18 +26,20 @@
         margin-bottom: 20px;
     }
     & .read-full-button {
-        background-color: #343434;
+        cursor: default;
         position: absolute;
         bottom: 30px;
         left: 30px;
-        color: #fff;
         font-size: 20px;
         padding: 6px 14px;
-        transition: background-color 0.4s;
         line-height: 1;
+        transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+        color: #375c85;
+        border: 1px solid #375c85;
         &:hover {
+            border-color: #233223;
+            color: #233223;
             background-color: #dedede;
-            border-color: transparent;
         }
     }
 

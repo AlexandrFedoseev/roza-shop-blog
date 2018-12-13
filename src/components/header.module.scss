@@ -76,10 +76,12 @@
     position: relative;
 
     a {
+        cursor: default;
         display: block;
         box-sizing: content-box;
         width: 240px;
         color: #fff;
+        border: 1px solid #fff;
         text-align: center;
         font-family: Oswald,sans-serif;
         text-transform: uppercase;
@@ -89,16 +91,14 @@
         font-weight: 300;
         line-height: 30px;
         padding: 6px 10px;
-        background-color: #343434;
         -webkit-transition: background-color .4s;
         transition: background-color .4s;
         z-index: 1;
         position: relative;
         box-shadow: none;
-        top: 30px;
+        top: 37px;
     }
     a:hover {
-        border-color: transparent;
         background-color: hsla(0,0%,100%,.4);
     }
     &:after {
