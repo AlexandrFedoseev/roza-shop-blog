@@ -14,7 +14,11 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              path
+              path,
+              image,
+              title,
+              info,
+              body
             }
           }
         }
