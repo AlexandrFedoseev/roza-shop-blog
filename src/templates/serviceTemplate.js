@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Header from "../components/header"
-import Section from "../components/section"
 import Footer from "../components/footer"
 import Container from "../components/container"
 import ContactForm from "../components/contactForm"
@@ -15,13 +14,13 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <main>
-        <Header image={frontmatter.image} ></Header>
-        <Section title={frontmatter.title}>
+        <Header title={frontmatter.title} image={frontmatter.image} ></Header>
+        <Container>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-        </Section>
+        </Container>
         <Container>
           <ContactForm></ContactForm>
-      </Container>
+        </Container>
         <Footer></Footer>
     </main>
   )
