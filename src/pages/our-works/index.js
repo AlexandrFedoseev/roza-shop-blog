@@ -13,7 +13,7 @@ const Card = props => (
             <div style={{backgroundImage: `url(${props.image})`}}>
             </div>
         </div>
-        <h2 style={{marginTop: `0`}} >{props.title}</h2>
+        <h2>{props.title}</h2>
     </a>
 )
 
