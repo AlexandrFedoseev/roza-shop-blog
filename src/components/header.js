@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import headerStyles from "./header.module.scss"
 
 export default () => (
@@ -34,10 +35,10 @@ export default () => (
       </div>
     </div>
     <div className={headerStyles.mainMenu}>
-      <a href="#">Главная</a>
-      <a href="#">Услуги</a>
-      <a href="#">Проекты</a>
-      <a href="#">Контакты</a>
+      <Link to="/">Главная</Link>
+      <Link to="/services/">Услуги</Link>
+      <Link to="/projects/">Проекты</Link>
+      <Link to="/contacts/">Контакты</Link>
     </div>
   </header>
 )
