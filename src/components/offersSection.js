@@ -2,7 +2,7 @@ import React from "react"
 import offersSectionStyles from "./offersSection.module.scss"
 
 const Offer = props => (
-    <a href="#" className={offersSectionStyles.card}>
+    <a href={props.linkTo} className={offersSectionStyles.card}>
         <div className={offersSectionStyles.imageHolder}>
             <div style={{backgroundImage: `url(${props.image})`}}>
             </div>
@@ -18,7 +18,7 @@ const Offer = props => (
 export default () => (
     <div>
         <div className={offersSectionStyles.container} style={{marginBottom: '20px'}}>
-            <Offer image={'/assets/images/weddings.jpg'} title={'Свадебная флористика'} content={'Команда флористов салона цветов "Роза Азора" - профессионалы свадебной флористики'}></Offer>
+            <Offer linkTo={'/services/wedding-floristry'} image={'/assets/images/weddings.jpg'} title={'Свадебная флористика'} content={'Команда флористов салона цветов "Роза Азора" - профессионалы свадебной флористики'}></Offer>
             <Offer image={'/assets/images/delivery.jpg'} title={'Доставка цветов и букетов'} content={'Максимум – 2 часа в черте города, минимум усилий с вашей стороны В “Розе Азора” можно оформить подписку на цветы, и адресат будет получать букеты точно в заявленные даты.'}></Offer>
             <Offer image={'/assets/images/interior.jpg'} title={'Оформление интерьеров'} content={'.. и частных, и корпоративных. Наши флористы подберут растения, подстраиваясь под условия освещения, влажности и температуры. Мы знаем некапризные растения, способные вписаться в быстрый жизненный ритм.'}></Offer>
             <Offer image={'/assets/images/corporations.jpg'} title={'Обслуживание организаций'} content={'50 компаний выбрали наш салон для создания букетов для партнеров, коллег, клиентов и сотрудников, для оформления корпоративных праздников и торжеств.'}></Offer>

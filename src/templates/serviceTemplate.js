@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Header from "../components/header"
 import Section from "../components/section"
+import Footer from "../components/footer"
 
 export default function Template({
   data,
@@ -16,6 +17,7 @@ export default function Template({
         <Section title={frontmatter.title}>
             <div dangerouslySetInnerHTML={{ __html: html }} />
         </Section>
+        <Footer></Footer>
     </main>
   )
 }
@@ -25,9 +27,9 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         path
         title
+        image
       }
     }
   }

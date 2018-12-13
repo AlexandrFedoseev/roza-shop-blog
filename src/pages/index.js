@@ -10,7 +10,7 @@ import ConsSection from "../components/consSection"
 import ContactForm from "../components/contactForm"
 export default () => (
     <main>
-    <Header></Header>
+    <Header image={"/assets/images/22-1_11.jpg"}></Header>
     <Section title={'Услуги'}>
         <OffersSection></OffersSection>
     </Section>

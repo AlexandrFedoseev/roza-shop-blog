@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import headerStyles from "./header.module.scss"
 
-export default () => (
+export default (props) => (
   <header>
     <div className={headerStyles.contacts}>
       <div>
@@ -24,7 +24,7 @@ export default () => (
         <span className={headerStyles.a1}>еще один проект от всей души</span>
       </div>
     </div>
-    <div className={headerStyles.welcome} style={{backgroundImage: `url(${"/assets/images/22-1_11.jpg"})`}}>
+    <div className={headerStyles.welcome} style={{backgroundImage: `url(${props.image})`}}>
       <div className={headerStyles.welcomeLogo}>
         <div>
             <img src="/assets/images/logo-white.png" />
