@@ -31,6 +31,9 @@ exports.createPages = ({ actions, graphql }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
+        image: node.frontmatter.image,
+        title: node.frontmatter.title,
+        info: node.frontmatter.info,
         component: servicePostTemplate,
         context: {}, // additional data can be passed via context
       })
