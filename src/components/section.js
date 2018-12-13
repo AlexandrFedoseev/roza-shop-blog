@@ -1,10 +1,15 @@
 import React from "react"
 import sectionStyles from "./section.module.scss"
 
-export default ({ title, children }) => (
+export default ({ title, linkTo, children }) => (
     <div className={sectionStyles.container}>
         <h1 className={sectionStyles.sectionTitle}>
-            <a href="#">{title}</a>
+            {linkTo &&
+                <a href={linkTo}>{title}</a>
+            }
+            {!linkTo &&
+                <span>{title}</span>
+            }
         </h1>
         {children}
     </div>

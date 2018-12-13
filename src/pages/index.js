@@ -13,10 +13,10 @@ import WorksGallery from "../components/works"
 export default () => (
     <main>
     <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={"/assets/images/22-1_11.jpg"}></Header>
-    <Section title={'Что мы предлагаем'}>
+    <Section linkTo={"/services"} title={'Что мы предлагаем'}>
         <OffersSection></OffersSection>
     </Section>
-    <Section title={'Как выглядят наши работы'}></Section>
+    <Section linkTo={"/our-works"} title={'Как выглядят наши работы'}></Section>
     <WorksGallery></WorksGallery>
     <Section title={'Почему именно "Роза Азора"'}>
         <ConsSection></ConsSection>
@@ -42,7 +42,7 @@ export default () => (
             счастья!
         </p>
     </Container>
-    <Section title={'Остались вопросы?'}>
+    <Section linkTo={"/contacts"} title={'Остались вопросы?'}>
         <ContactForm></ContactForm>
     </Section>
     <Section title={'Присоединяйтесь к нам в instagram'}>
