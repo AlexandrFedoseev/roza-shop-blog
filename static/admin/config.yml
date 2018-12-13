@@ -16,3 +16,13 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: services
+    label: "Услуги"
+    folder: site/content/services
+    create: true
+    fields:
+      - { name: path, label: "URL путь" }
+      - { name: title, label: "Название" }
+      - { name: image, label: "Изображение", widget: image }
+      - { name: info, label: "Кратко", widget: text }
+      - { name: body, label: "Описание", widget: markdown }
