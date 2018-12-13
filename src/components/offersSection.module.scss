@@ -13,17 +13,14 @@
     margin: 0;
     position: relative;
     box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
     @media screen and (min-width: 900px) {
-        border: 1px solid #ddd;
         width: calc(50% - 20px);
-        margin: 0 10px;
-        margin-bottom: 20px;
+        margin: 0 10px 20px;
     }
     @media screen and (min-width: 1200px) {
-        border: 1px solid #ddd;
         width: calc(33.33% - 20px);
-        margin: 0 10px;
-        margin-bottom: 20px;
     }
     & .read-full-button {
         cursor: default;
