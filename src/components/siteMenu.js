@@ -14,7 +14,7 @@ export default () => (
             </li>
             <li>
                 <span className={styles.no}>No</span>
-                <em className={styles.num}>3</em>
+                <em className={styles.num}>2</em>
                 <a href="/our-works">
                     <p>Наши работы</p>
                     <span>→</span>
@@ -22,7 +22,7 @@ export default () => (
             </li>
             <li>
                 <span className={styles.no}>No</span>
-                <em className={styles.num}>4</em>
+                <em className={styles.num}>3</em>
                 <a href="/contacts">
                     <p>Контакты</p>
                     <span>→</span>
