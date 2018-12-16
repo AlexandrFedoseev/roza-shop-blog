@@ -50,7 +50,6 @@ export default (props) => (
     </div>
     <div className={headerStyles.mainMenu}>
       <a href="/" >Главная</a>
-      <a href="/services">Услуги</a>
       <a href="/our-works">Наши работы</a>
       <a href="/contacts">Контакты</a>
     </div>

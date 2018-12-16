@@ -14,14 +14,6 @@ export default () => (
             </li>
             <li>
                 <span className={styles.no}>No</span>
-                <em className={styles.num}>2</em>
-                <a href="/services">
-                    <p>Услуги</p>
-                    <span>→</span>
-                </a>
-            </li>
-            <li>
-                <span className={styles.no}>No</span>
                 <em className={styles.num}>3</em>
                 <a href="/our-works">
                     <p>Наши работы</p>
