@@ -1,11 +1,5 @@
-/*Цветочный салон Роза Азора в Минске: букеты, подарки
-
-Удивить родных и близких оригинальным подарком вам поможет салон цветов Роза Азора: авторские букеты, экзотические свежие цветы, сувениры, аксессуары для дома
-*/
-
-
 import React from "react"
-
+import Helmet from "react-helmet"
 import Container from "../components/container"
 import Header from "../components/header"
 import Footer from "../components/footer"
@@ -16,8 +10,44 @@ import ContactForm from "../components/contactForm"
 import WorksGallery from "../components/works"
 
 export default function ({ data }) {
-    return(<main>
-    <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={"/assets/images/22-1_11.jpg"}></Header>
+    const pageTitle = "Цветочный салон Роза Азора в Минске: букеты, подарки"
+    const pageDescription = `
+        Удивить родных и близких оригинальным подарком вам
+        поможет салон цветов Роза Азора: авторские букеты,
+        экзотические свежие цветы, сувениры, аксессуары для дома`;
+    const pageImage = "/assets/images/22-1_11.jpg";
+    return(
+        <main>
+        <Helmet
+            htmlAttributes={{"lang": "ru", "amp": undefined}} // amp takes no value
+            title={pageTitle}
+            base={{"href": "/"}}
+            meta={[
+                {"name": "description", "content": pageDescription},
+                {"name": "theme-color", "content": "#fff"},
+                {"name": "geo.placename", "content": "Minsk"},
+                {"name": "geo.region", "content": "BY"},
+
+                {"name": "twitter:card", "content": "summary"},
+                {"name": "twitter:site", "content": "@beflorist"},
+                {"name": "twitter:title", "content": pageTitle},
+                {"name": "twitter:description", "content": pageDescription},
+                {"name": "twitter:image", "content": pageImage},
+
+                {"property": "og:type", "content": "business.business"},
+                {"property": "og:site_name", "content": "Салон цветов Rozaazora"},
+                {"property": "og:title", "content": pageTitle},
+                {"property": "og:url", "content": "/"},
+                {"property": "og:image", "content": pageImage}
+            ]}
+            // link={[
+            //     {"rel": "canonical", "href": "http://mysite.com/example"},
+            //     {"rel": "apple-touch-icon", "href": "http://mysite.com/img/apple-touch-icon-57x57.png"},
+            //     {"rel": "apple-touch-icon", "sizes": "72x72", "href": "http://mysite.com/img/apple-touch-icon-72x72.png"}
+            // ]}
+        />
+
+    <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={pageImage}></Header>
     <Section linkTo={"/services"} title={'Что мы предлагаем'}>
         <OffersSection data={data}></OffersSection>
     </Section>
