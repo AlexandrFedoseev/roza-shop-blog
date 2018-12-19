@@ -1,4 +1,7 @@
-import React from "react"
+/*Цветочные композиции в шляпных коробках, корзинках в Минске
+
+Купить композицию из живых цветов - сделать необычный и оригинальный подарок для любимых, близких и родных! Быстрая доставка в Минске
+*/import React from "react"
 
 import Header from "../../components/header"
 import Footer from "../../components/footer"

@@ -1,4 +1,7 @@
-import React from "react"
+/*Заказать букет из цветов в Минске
+
+Букеты, композиции из живых и самых свежих цветов в Минске в салоне Роза Азора. Профессиональные флористы. Качественная доставка.
+*/import React from "react"
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import styles from "./contacts.module.scss"
 import Header from "../components/header"

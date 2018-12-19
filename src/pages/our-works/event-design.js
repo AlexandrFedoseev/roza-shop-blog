@@ -1,4 +1,7 @@
-import React from "react"
+/*Оформление и декор свадеб, юбилеев, конференций в Минск
+
+Фотозона, банкетный зал, выездная регистрация - мы профессионально разработаем концепт оформления вашей свадьбы, дня рождения или корпоратива. 
+*/import React from "react"
 
 import Header from "../../components/header"
 import Footer from "../../components/footer"

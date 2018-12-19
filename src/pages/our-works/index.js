@@ -1,3 +1,9 @@
+/**
+ * title: Цветы, букеты, композиции, оформление свадьбы в Минске 
+ * 
+ * description: 
+Купить цветы в Минске от флористов салона Роза Азора. Заказать быструю доставку букетов и композиций по Минску
+ */
 import React from "react"
 
 import offersStyles from "../../components/offersSection.module.scss"
