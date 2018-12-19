@@ -4,7 +4,6 @@ import styles from "./contacts.module.scss"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Container from "../components/container"
-import Section from "../components/section"
 import ContactForm from "../components/contactForm"
 
 const state = {

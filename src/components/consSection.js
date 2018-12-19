@@ -3,7 +3,7 @@ import consSectionStyles from "./consSection.module.scss"
 
 const Con = props => (
     <div className={consSectionStyles.consItem}>
-        <img src={props.image} />
+        <img alt={'ok icon'} src={props.image} />
         <span className={consSectionStyles.conText}>
             {props.conText}
         </span>

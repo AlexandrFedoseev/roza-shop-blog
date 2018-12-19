@@ -1,10 +1,10 @@
 import React from "react"
 
-import styles from "./projects.module.scss"
 import offersStyles from "../../components/offersSection.module.scss"
 import Header from "../../components/header"
+import { graphql } from "gatsby"
+
 import Footer from "../../components/footer"
-import Section from "../../components/section"
 import Container from "../../components/container";
 
 const Card = props => (
@@ -17,8 +17,9 @@ const Card = props => (
     </a>
 )
 
-export default () => (
-    <main>
+export default function ({data}) {
+    console.log(data)
+    return(<main>
         <Header title={'Наши работы'} image={"/assets/images/22-1_11.jpg"}></Header>
         <Container>
             <div className={offersStyles.container} style={{marginBottom: '20px'}}>
@@ -31,5 +32,18 @@ export default () => (
             </div>
         </Container>
         <Footer></Footer>
-    </main>
-)
+    </main>)
+}
+
+
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        title
+        image
+      }
+    }
+  }
+`

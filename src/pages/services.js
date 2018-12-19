@@ -1,6 +1,5 @@
 import React from "react"
 
-import styles from "./services.module.scss"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Section from "../components/section"

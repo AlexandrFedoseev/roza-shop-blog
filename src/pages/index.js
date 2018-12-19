@@ -1,6 +1,5 @@
 import React from "react"
 
-import styles from "./index.module.scss"
 import Container from "../components/container"
 import Header from "../components/header"
 import Footer from "../components/footer"
@@ -10,11 +9,11 @@ import ConsSection from "../components/consSection"
 import ContactForm from "../components/contactForm"
 import WorksGallery from "../components/works"
 
-export default () => (
-    <main>
+export default function ({ data }) {
+    return(<main>
     <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={"/assets/images/22-1_11.jpg"}></Header>
     <Section linkTo={"/services"} title={'Что мы предлагаем'}>
-        <OffersSection></OffersSection>
+        <OffersSection data={data}></OffersSection>
     </Section>
     <Section linkTo={"/our-works"} title={'Как выглядят наши работы'}></Section>
     <WorksGallery></WorksGallery>
@@ -50,4 +49,26 @@ export default () => (
     </Section>
     <Footer></Footer>
     </main>
-)
+    )
+}
+
+export const query = graphql`
+    query {
+        allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___title] }
+            limit: 6
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        path,
+                        image,
+                        title,
+                        info
+                    }
+                }
+            }
+        }
+    }
+
+`

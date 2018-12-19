@@ -1,9 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { Link } from "gatsby"
 import styles from "./menuBtn.module.scss"
 import headerStyles from "./header.module.scss"
-import SiteMenu from "./siteMenu"
 
 let menuButton = (btn) => {
     if (btn == null) { return; }

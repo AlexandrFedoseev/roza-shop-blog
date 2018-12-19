@@ -6,7 +6,7 @@ export default () => (
         <div className={footerStyles.footerCol}>
             <h3>Мы в соцсетях</h3>
             <div className={footerStyles.footerSocials}>
-                <a href="https://www.instagram.com/rozaazora/" target="_blank">
+                <a href="https://www.instagram.com/rozaazora/" target="_blank" rel="noopener noreferrer">
                     <img src="https://d33wubrfki0l68.cloudfront.net/610d4dc7bd99fb1ff596f6c1b9e3a9b3405d6531/221cc/img/icons/instagram.svg" width="40" height="40" alt="instagram" title="instagram" />
                 </a>
             </div>

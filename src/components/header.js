@@ -15,7 +15,7 @@ export default (props) => (
       </div>
       <div className={headerStyles.phones}>
         <div className={headerStyles.centerInBox}>
-          <img className={headerStyles.icon} src="/assets/images/phone.svg" />
+          <img className={headerStyles.icon} src="/assets/images/phone.svg" alt={'phone'} />
           <div className={headerStyles.blockContent}>
             <a href="tel:+375293363303">+375 29 336 33 03</a><br />
             <a href="tel:+375172686138">+375 17 268 61 38</a>
@@ -24,7 +24,7 @@ export default (props) => (
       </div>
       <div className={headerStyles.location}>
         <div className={headerStyles.centerInBox}>
-          <img className={headerStyles.icon} src="/assets/images/location.svg" />
+          <img className={headerStyles.icon} src="/assets/images/location.svg"  alt={'location'} />
           <div className={headerStyles.blockContent}>
             Пр-т Независимости, 186<br/>
             <span className={headerStyles.smallText}>Без выходных с 9:00 до 20:00</span>
@@ -38,7 +38,7 @@ export default (props) => (
     <div className={headerStyles.welcome} style={{backgroundImage: `url(${props.image})`}}>
       <div className={headerStyles.welcomeLogo}>
         <div>
-            <img src="/assets/images/logo-white.png" />
+            <img src="/assets/images/logo-white.png" alt={'rozaazora'} />
         </div>
         <h2>
             {props.title}
