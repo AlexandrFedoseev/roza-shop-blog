@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Container from "../components/container"
 import Header from "../components/header"
@@ -88,7 +89,7 @@ export default function ({ data }) {
     )
 }
 
-export const query = graphql`
+export const pageQuery = graphql`
     query {
         allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___title] }
