@@ -53,7 +53,7 @@ export default function ({data}) {
             <div className={offersStyles.container} style={{marginBottom: '20px'}}>
                 <Card title={'Букеты'} linkTo={"/our-works/bouquets"} image={'/assets/images/works/1.jpg'}></Card>
                 <Card title={'Композиции'} linkTo={"/our-works/compositions"} image={'/assets/images/works/2.jpg'}></Card>
-                <Card title={'Сухоцветы и стабилизированные цветы'} linkTo={"/our-works/dried-flowers-and-stabilized-flowers"} image={'/assets/images/works/3.jpg'}></Card>
+                <Card title={'Стабилизированные цветы'} linkTo={"/our-works/stabilized-flowers"} image={'/assets/images/works/3.jpg'}></Card>
                 <Card title={'Живые стены'} linkTo={"/our-works/living-walls"} image={'/assets/images/works/4.jpg'}></Card>
                 <Card title={'Оформление мероприятий'} linkTo={"/our-works/event-design"} image={'/assets/images/works/5.jpg'}></Card>
                 <Card title={'Новогодняя флористика'} linkTo={"/our-works/christmas-floristics"} image={'/assets/images/works/6.jpg'}></Card>
