@@ -9,6 +9,7 @@ import OffersSection from "../components/offersSection"
 import ConsSection from "../components/consSection"
 import ContactForm from "../components/contactForm"
 import WorksGallery from "../components/works"
+import InstagramGallery from "../components/instagramGallery"
 
 export default function(props) {
     console.log(props)
@@ -83,9 +84,8 @@ export default function(props) {
     <Section linkTo={"/contacts"} title={'Остались вопросы?'}>
         <ContactForm></ContactForm>
     </Section>
-    <Section title={'Присоединяйтесь к нам в instagram'}>
-        instagram
-    </Section>
+    <Section linkTo={"/contacts"} title={'Присоединяйтесь к нам в instagram'} />
+    <InstagramGallery />
     <Footer></Footer>
     </main>
     )

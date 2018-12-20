@@ -1,0 +1,20 @@
+.gallery {
+    display: block;
+    div {
+        width: calc(100% / 2);
+        padding-top: calc(100% / 2);
+        float: left;
+        background-size: 100%;
+
+        @media screen and (min-width: 600px) {
+            width: calc(100% / 6);
+            padding-top: calc(100% / 6);
+        }
+    }
+
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
