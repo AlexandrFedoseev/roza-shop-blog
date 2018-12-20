@@ -11,7 +11,9 @@ export default (props) => (
     </div>
     <div className={headerStyles.contacts}>
       <div>
-        <img width="198" height="52" src="/assets/images/2337_logo.png" alt="logo" title="RozaAzora"/>
+        <a href="/">
+          <img width="198" height="52" src="/assets/images/2337_logo.png" alt="logo" title="RozaAzora"/>
+        </a>
       </div>
       <div className={headerStyles.phones}>
         <div className={headerStyles.centerInBox}>
