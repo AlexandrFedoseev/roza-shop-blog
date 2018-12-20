@@ -15,14 +15,15 @@ const Offer = props => (
     </a>
 )
 
-export default function ( {data} ) { 
+export default function (props) { 
+    const data = props.slugs;
     console.log(data)
     return(
         <div>
             <div className={offersSectionStyles.container} style={{marginBottom: '20px'}}>
             {data.allMarkdownRemark.edges.map((edge, i) => {
                     const node = edge.node.frontmatter;
-                    return (<Offer linkTo={node.path} image={node.image} title={node.title} content={node.info} />) 
+                    return (<Offer linkTo={node.path} image={node.image} title={node.title} content={node.info} key={i}/>) 
                 })
             }
             </div>

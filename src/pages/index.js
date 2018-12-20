@@ -10,7 +10,9 @@ import ConsSection from "../components/consSection"
 import ContactForm from "../components/contactForm"
 import WorksGallery from "../components/works"
 
-export default function ({ data }) {
+export default function(props) {
+    console.log(props)
+    const data = props.data;
     const pageTitle = "Цветочный салон Роза Азора в Минске: букеты, подарки"
     const pageDescription = `
         Удивить родных и близких оригинальным подарком вам
@@ -50,7 +52,7 @@ export default function ({ data }) {
 
     <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={pageImage}></Header>
     <Section linkTo={"/services"} title={'Что мы предлагаем'}>
-        <OffersSection data={data}></OffersSection>
+        <OffersSection slugs={props.data}></OffersSection>
     </Section>
     <Section linkTo={"/our-works"} title={'Как выглядят наши работы'}></Section>
     <WorksGallery></WorksGallery>
