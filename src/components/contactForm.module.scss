@@ -65,9 +65,21 @@ form button {
 h4 {
     text-transform: uppercase;
     font-family: Oswald,sans-serif;
+    text-align: center;
     font-weight: 300;
     line-height: 1.5;
-    padding-top: 32px;
+    padding-top: 0;
     padding-bottom: 8px;
     font-size: 24px;
+}
+
+form {
+    display: inline-block;
+}
+.top-wrapper {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.button {
+    text-align: left;
 }
