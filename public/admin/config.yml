@@ -50,7 +50,7 @@ collections:
         fields:
           - {label: "СЕО Заголовок", name: title, widget: string}
           - {label: "СЕО Описание", name: description, widget: text}
-          - {label: "СЕО Изображение", name: image, widget: image}
+          - {label: "СЕО Изображение", name: seoimage, widget: image}
           - {label: "Фон заголовка", name: image, widget: image}
           - {label: "Телефон 1", name: phone1, widget: string}
           - {label: "Телефон 2", name: phone2, widget: string}
@@ -65,11 +65,10 @@ collections:
     fields:
       - { name: path, label: "URL путь" }
       - { name: title, label: "Название" }
-      - { name: image, label: "Изображение", widget: image }
+      - {label: "Фон заголовка", name: image, widget: image}
       - {label: "СЕО Заголовок", name: seotitle, widget: string}
       - {label: "СЕО Описание", name: description, widget: text}
-      - {label: "СЕО Изображение", name: image, widget: image}
-      - {label: "Фон заголовка", name: image, widget: image}
+      - {label: "СЕО Изображение", name: seoimage, widget: image}
       - { name: info, label: "Кратко", widget: text }
       - { name: body, label: "Описание", widget: markdown }
   - name: services
