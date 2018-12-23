@@ -36,6 +36,14 @@ collections:
             fields:
               - {label: "СЕО подпись", name: alt, widget: string}
               - {label: "Картинка", name: image, widget: image}
+      - label: "Наши Работы"
+        name: "ourWorks"
+        file: "site/content/our-works.yml"
+        fields:
+          - {label: "СЕО Заголовок", name: title, widget: string}
+          - {label: "СЕО Описание", name: description, widget: text}
+          - {label: "СЕО Изображение", name: image, widget: image}
+          - {label: "Фон заголовка", name: image, widget: image}
       - label: "Контакты"
         name: "contacts"
         file: "site/content/contacts.yml"
