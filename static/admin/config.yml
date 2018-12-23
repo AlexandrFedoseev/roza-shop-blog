@@ -71,7 +71,7 @@ collections:
       - {label: "СЕО Изображение", name: seoimage, widget: image}
       - { name: info, label: "Кратко", widget: text }
       - { name: body, label: "Описание", widget: markdown }
-  - name: services
+  - name: ourworks
     label: "Наши Работы"
     folder: site/content/our-works
     create: true
