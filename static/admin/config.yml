@@ -7,15 +7,49 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: site/content/blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Главная"
+        name: "home"
+        file: "site/content/home.yml"
+        fields:
+          - {label: "СЕО Заголовок", name: title, widget: string}
+          - {label: "СЕО Описание", name: description, widget: text}
+          - {label: "СЕО Изображение", name: image, widget: image}
+          - {label: "Фон заголовка", name: image, widget: image}
+          - label: "Примеры работ"
+            name: works
+            widget: list
+            fields:
+              - {label: "СЕО подпись", name: alt, widget: string}
+              - {label: "Картинка", name: image, widget: image}
+          - label: "Преимущества"
+            name: team
+            widget: list
+            fields:
+              - {label: "Пункт", name: point, widget: string}
+          - {label: "О нас", name: about, widget: markdown}
+          - label: "Инстаграм"
+            name: instagram
+            widget: list
+            fields:
+              - {label: "СЕО подпись", name: alt, widget: string}
+              - {label: "Картинка", name: image, widget: image}
+      - label: "Контакты"
+        name: "contacts"
+        file: "site/content/contacts.yml"
+        fields:
+          - {label: "СЕО Заголовок", name: title, widget: string}
+          - {label: "СЕО Описание", name: description, widget: text}
+          - {label: "СЕО Изображение", name: image, widget: image}
+          - {label: "Фон заголовка", name: image, widget: image}
+          - {label: "Телефон 1", name: phone1, widget: string}
+          - {label: "Телефон 2", name: phone2, widget: string}
+          - {label: "Адрес", name: location, widget: string}
+          - {label: "ГЕО lat", name: lat, widget: number}
+          - {label: "ГЕО lon", name: lon, widget: number}
+          - {label: "Время работы", name: worktime, widget: string}
   - name: services
     label: "Услуги"
     folder: site/content/services
