@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Главная"
         name: "home"
-        file: "site/content/home.yml"
+        file: "site/content/home/home.yml"
         fields:
           - {label: "СЕО Заголовок", name: title, widget: string}
           - {label: "СЕО Описание", name: description, widget: text}
@@ -25,7 +25,7 @@ collections:
               - {label: "СЕО подпись", name: alt, widget: string}
               - {label: "Картинка", name: image, widget: image}
           - label: "Преимущества"
-            name: team
+            name: cons
             widget: list
             fields:
               - {label: "Пункт", name: point, widget: string}

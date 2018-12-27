@@ -12,14 +12,10 @@ import WorksGallery from "../components/works"
 import InstagramGallery from "../components/instagramGallery"
 
 export default function(props) {
-    console.log(props)
     const data = props.data;
-    const pageTitle = "Цветочный салон Роза Азора в Минске: букеты, подарки"
-    const pageDescription = `
-        Удивить родных и близких оригинальным подарком вам
-        поможет салон цветов Роза Азора: авторские букеты,
-        экзотические свежие цветы, сувениры, аксессуары для дома`;
-    const pageImage = "/assets/images/22-1_11.jpg";
+    const pageTitle = props.data.allHomeYaml.edges[0].node.title;
+    const pageDescription = props.data.allHomeYaml.edges[0].node.description;
+    const pageImage = props.data.allHomeYaml.edges[0].node.image;
     return(
         <main>
         <Helmet
@@ -56,36 +52,18 @@ export default function(props) {
         <OffersSection slugs={props.data}></OffersSection>
     </Section>
     <Section linkTo={"/our-works"} title={'Как выглядят наши работы'}></Section>
-    <WorksGallery></WorksGallery>
+    <WorksGallery images={props.data.allHomeYaml.edges[0].node.works}></WorksGallery>
     <Section title={'Почему именно "Роза Азора"'}>
-        <ConsSection></ConsSection>
+        <ConsSection cons={props.data.allHomeYaml.edges[0].node.cons} ></ConsSection>
     </Section>
     <Container>
-        <p>
-            &laquo;Роза Азора&raquo;&nbsp;&mdash; это известный в&nbsp;Минске и&nbsp;нежно 
-            любимый многими салон цветов. В&nbsp;нем работает команда флористов, мастеров 
-            своего дела. Мы&nbsp;единственные в&nbsp;своем роде, потому что мы&nbsp;продаем 
-            не&nbsp;цветы&nbsp;&mdash; мы&nbsp;выстраиваем мосты между людьми: от&nbsp;сердца 
-            к&nbsp;сердцу, от&nbsp;души к&nbsp;душе. Наши букеты для многих стали неотъемлемой 
-            частью жизни, ведь они делают любовь искренней, дружбу&nbsp;&mdash; крепкой, 
-            партнерство&nbsp;&mdash; открытым.
-        </p>
-        <p>
-            Феномен &laquo;Роза Азора&raquo; не&nbsp;объяснить словами. Это целый мир 
-            благородных поступков, красивых историй, невероятных обстоятельств и&nbsp;сказочной 
-            красоты событий. Каждый день мы&nbsp;участвуем в&nbsp;важнейших моментах вашей 
-            жизни, выражая эмоции в&nbsp;прекрасных растениях. И&nbsp;наши букеты творят чудеса. 
-            Однажды открыв для себя необыкновенную силу цветов, мужчины никогда не&nbsp;отпускают 
-            это средство, а&nbsp;женщины становятся счастливее. Мы&nbsp;работаем для вас 
-            и&nbsp;влюблены в&nbsp;свое дело. Мы&nbsp;знаем все нюансы. Мы&nbsp;знаем секреты 
-            счастья!
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: props.data.allHomeYaml.edges[0].node.about }} />
     </Container>
     <Section linkTo={"/contacts"} title={'Остались вопросы?'}>
         <ContactForm></ContactForm>
     </Section>
     <Section linkTo={"/contacts"} title={'Присоединяйтесь к нам в instagram'} />
-    <InstagramGallery />
+    <InstagramGallery images={props.data.allHomeYaml.edges[0].node.instagram} />
     <Footer></Footer>
     </main>
     )
@@ -107,6 +85,28 @@ export const pageQuery = graphql`
                     }
                 }
             }
+        },
+        allHomeYaml {
+          edges {
+            node {
+              title
+              description
+              seoimage
+              image
+              works {
+                alt
+                image
+              }
+              cons {
+                point
+              }
+              about
+              instagram {
+                alt
+                image
+              }
+            }
+          }
         }
     }
 

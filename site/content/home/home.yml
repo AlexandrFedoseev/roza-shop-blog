@@ -22,7 +22,7 @@ works:
     image: /assets/works-example-7.jpg
   - alt: зеленая стена
     image: /assets/works-example-8.jpg
-team:
+cons:
   - point: Опыт - дарим положительные эмоции более 10 лет
   - point: Эксклюзивный ассортимент из 10 стран мира
   - point: >-
