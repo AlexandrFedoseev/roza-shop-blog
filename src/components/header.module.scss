@@ -18,12 +18,24 @@
         padding: 16px 0;
         white-space: nowrap;
         width: 100%;
+        &.location .block-content {
+            display: none;
+        }
+        &.phones .block-content {
+            display: none;
+        }
         @media screen and (min-width: 500px) {
             &.phones {
                 width: calc((100% - 44px - 198px - 40px));
             }
+            &.phones .block-content {
+                display: block;
+            }
         }
         @media screen and (min-width: 900px) {
+            &.location .block-content {
+                display: block;
+            }
             &.phones, &.location {
                 width: calc((100% - 44px - 198px) / 2);
             }

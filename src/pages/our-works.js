@@ -1,11 +1,11 @@
 import React from "react"
 import Helmet from "react-helmet"
-import offersStyles from "../../components/offersSection.module.scss"
-import Header from "../../components/header"
+import offersStyles from "../components/offersSection.module.scss"
+import Header from "../components/header"
 import { graphql } from "gatsby"
 
-import Footer from "../../components/footer"
-import Container from "../../components/container";
+import Footer from "../components/footer"
+import Container from "../components/container";
 
 const Card = props => (
     <a href={props.linkTo} className={offersStyles.card} style={{paddingBottom: `0`}}>
