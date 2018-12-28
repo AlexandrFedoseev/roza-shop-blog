@@ -78,7 +78,7 @@ collections:
     fields:
       - { name: path, label: "URL путь" }
       - { name: title, label: "Название раздела" }
-      - { name: image, label: "Изображение", widget: image }
+      - { name: slugimage, label: "Изображение", widget: image }
       - {label: "СЕО Заголовок", name: seotitle, widget: string}
       - {label: "СЕО Описание", name: description, widget: text}
       - {label: "СЕО Изображение", name: seoimage, widget: image}
