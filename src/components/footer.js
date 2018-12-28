@@ -1,7 +1,7 @@
 import React from "react"
 import footerStyles from "./footer.module.scss"
 
-export default () => (
+export default (props) => (
     <div className={footerStyles.footer}>
         <div className={footerStyles.footerCol}>
             <h3>Мы в соцсетях</h3>
@@ -17,11 +17,11 @@ export default () => (
                 <br/>
                 <a href="mailto:rozaazora-shop@yandex.by">rozaazora-shop@yandex.by</a><br/><br/>
                 Беларусь, Минск,<br/>
-                Пр-т Независимости, 186
+                {props.data.edges[0].node.location}
                 <br/>
                 <br/>
-                <a href="tel:+375293363303">+375 29 336 33 03</a><br/>
-                <a href="tel:+375172686138">+375 17 268 61 38</a>
+                <a href={"tel:" + props.data.edges[0].node.phone1.replace(/\s/g, '')}>{props.data.edges[0].node.phone1}</a><br/>
+                <a href={"tel:" + props.data.edges[0].node.phone2.replace(/\s/g, '')}>{props.data.edges[0].node.phone2}</a>
             </address>
         </div>
         <div className={footerStyles.footerCol}>

@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import styles from "./contacts.module.scss"
@@ -7,19 +8,17 @@ import Footer from "../components/footer"
 import Container from "../components/container"
 import ContactForm from "../components/contactForm"
 
-const state = {
-    center: [53.947696, 27.697678],
-    zoom: 18,
-    controls: ['zoomControl', 'fullscreenControl'],
-};
 
-export default function () {
-    const pageTitle = "Заказать букет из цветов в Минске"
-    const pageDescription = `
-        Букеты, композиции из живых и самых свежих цветов в
-        Минске в салоне Роза Азора. Профессиональные флористы.
-        Качественная доставка.`;
-    const pageImage = "/assets/images/22-1_11.jpg";
+export default function ({ data }) {
+    console.log(data);
+    const pageTitle = data.allContactsYaml.edges[0].node.title;
+    const pageDescription = data.allContactsYaml.edges[0].node.description;
+    const pageImage = data.allContactsYaml.edges[0].node.seoimage;
+    const state = {
+        center: [data.allContactsYaml.edges[0].node.lat, data.allContactsYaml.edges[0].node.lon],
+        zoom: 18,
+        controls: ['zoomControl', 'fullscreenControl'],
+    };
     return (
     <main>
         <Helmet
@@ -45,7 +44,7 @@ export default function () {
                 {"property": "og:image", "content": pageImage}
             ]}
         />
-        <Header title={'Контакты'}  image={"/assets/images/22-1_11.jpg"}></Header>
+        <Header title={'Контакты'}  image={data.allContactsYaml.edges[0].node.image} data={data.allContactsYaml}></Header>
             <Container>
                 <p className={styles.firstContainer}>
                     Отправьте нам заявку либо позвоните по телефонам, указанным ниже. Мы с удовольствием ответим на все Ваши вопросы и расскажем все подробности про наши услуги.
@@ -58,8 +57,8 @@ export default function () {
                     <br />
                 
                     <br />
-                    <a href="tel:+375293363303">+375 29 336 33 03</a><br />
-                    <a href="tel:+375172686138">+375 17 268 61 38</a>
+                    <a href={"tel:" + data.allContactsYaml.edges[0].node.phone1.replace(/\s/g, '')}>{data.allContactsYaml.edges[0].node.phone1}</a><br />
+                    <a href={"tel:" + data.allContactsYaml.edges[0].node.phone2.replace(/\s/g, '')}>{data.allContactsYaml.edges[0].node.phone2}</a>
                 </p>
             </Container>
             <Container>
@@ -68,8 +67,7 @@ export default function () {
             <Container>
                 <h4>Адрес</h4>
                 <p>
-                    Беларусь, Минск,
-                    Пр-т Независимости, 186
+                    Беларусь, Минск, {data.allContactsYaml.edges[0].node.location}
                 </p>
             </Container>
             <YMaps
@@ -89,7 +87,28 @@ export default function () {
             />
             </Map>
           </YMaps>
-        <Footer></Footer>
+        <Footer data={data.allContactsYaml}></Footer>
     </main>
 )
 }
+
+export const pageQuery = graphql`
+    query {
+        allContactsYaml {
+            edges {
+                node {
+                    title
+                    description
+                    seoimage
+                    image
+                    phone1
+                    phone2
+                    location
+                    lat
+                    lon
+                    worktime
+                }
+            }
+        }
+    }
+`

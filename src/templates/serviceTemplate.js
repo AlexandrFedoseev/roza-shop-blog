@@ -41,14 +41,14 @@ export default function Template({
           {"property": "og:image", "content": frontmatter.image}
       ]}
   />
-        <Header title={frontmatter.title} image={frontmatter.image} ></Header>
+        <Header title={frontmatter.title} image={frontmatter.image} data={data.allContactsYaml}></Header>
         <Container>
             <div dangerouslySetInnerHTML={{ __html: html }} />
         </Container>
         <Container>
           <ContactForm></ContactForm>
         </Container>
-        <Footer></Footer>
+        <Footer data={data.allContactsYaml}></Footer>
     </main>
   )
 }
@@ -62,6 +62,22 @@ export const pageQuery = graphql`
         title
         image
       }
-    }
+    },
+      allContactsYaml {
+        edges {
+            node {
+                title
+                description
+                seoimage
+                image
+                phone1
+                phone2
+                location
+                lat
+                lon
+                worktime
+            }
+        }
+      }
   }
 `

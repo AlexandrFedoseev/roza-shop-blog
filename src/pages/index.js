@@ -12,7 +12,6 @@ import WorksGallery from "../components/works"
 import InstagramGallery from "../components/instagramGallery"
 
 export default function(props) {
-    const data = props.data;
     const pageTitle = props.data.allHomeYaml.edges[0].node.title;
     const pageDescription = props.data.allHomeYaml.edges[0].node.description;
     const pageImage = props.data.allHomeYaml.edges[0].node.image;
@@ -47,7 +46,7 @@ export default function(props) {
             // ]}
         />
 
-    <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={pageImage}></Header>
+    <Header buttonTitle={'Заказать букет'} title={"Салон цветов"} image={pageImage} data={props.data.allContactsYaml}></Header>
     <Section linkTo={"/services"} title={'Что мы предлагаем'}>
         <OffersSection slugs={props.data}></OffersSection>
     </Section>
@@ -64,7 +63,7 @@ export default function(props) {
     </Section>
     <Section linkTo={"/contacts"} title={'Присоединяйтесь к нам в instagram'} />
     <InstagramGallery images={props.data.allHomeYaml.edges[0].node.instagram} />
-    <Footer></Footer>
+    <Footer data={props.data.allContactsYaml}></Footer>
     </main>
     )
 }
@@ -108,6 +107,21 @@ export const pageQuery = graphql`
             }
           }
         }
+        allContactsYaml {
+            edges {
+                node {
+                    title
+                    description
+                    seoimage
+                    image
+                    phone1
+                    phone2
+                    location
+                    lat
+                    lon
+                    worktime
+                }
+            }
+        }
     }
-
 `

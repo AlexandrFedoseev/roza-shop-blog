@@ -1,6 +1,5 @@
 import React from "react"
 import headerStyles from "./header.module.scss"
-
 import SiteMenu from "./siteMenu"
 import MenuBtn from "./menuBtn"
 
@@ -19,8 +18,8 @@ export default (props) => (
         <div className={headerStyles.centerInBox}>
           <img className={headerStyles.icon} src="/assets/images/phone.svg" alt={'phone'} />
           <div className={headerStyles.blockContent}>
-            <a href="tel:+375293363303">+375 29 336 33 03</a><br />
-            <a href="tel:+375172686138">+375 17 268 61 38</a>
+            <a href={"tel:" + props.data.edges[0].node.phone1.replace(/\s/g, '')}>{props.data.edges[0].node.phone1}</a><br />
+            <a href={"tel:" + props.data.edges[0].node.phone2.replace(/\s/g, '')}>{props.data.edges[0].node.phone2}</a>
           </div>
         </div>
       </div>
@@ -28,8 +27,8 @@ export default (props) => (
         <div className={headerStyles.centerInBox}>
           <img className={headerStyles.icon} src="/assets/images/location.svg"  alt={'location'} />
           <div className={headerStyles.blockContent}>
-            Пр-т Независимости, 186<br/>
-            <span className={headerStyles.smallText}>Без выходных с 9:00 до 20:00</span>
+            {props.data.edges[0].node.location}<br/>
+            <span className={headerStyles.smallText}>{props.data.edges[0].node.worktime}</span>
           </div>
         </div>
       </div>
