@@ -18,12 +18,9 @@ const Card = props => (
 )
 
 export default function ({data}) {
-    const pageTitle = "Цветы, букеты, композиции, оформление свадьбы в Минске"
-    const pageDescription = `
-        Купить цветы в Минске от флористов салона Роза Азора.
-        Заказать быструю доставку букетов и композиций по Минску
-        `;
-    const pageImage = "/assets/images/22-1_11.jpg";
+    const pageTitle = data.allOurworksYaml.edges[0].node.title;
+    const pageDescription = data.allOurworksYaml.edges[0].node.description;
+    const pageImage = data.allOurworksYaml.edges[0].node.seoimage;
     return(<main>
         <Helmet
             htmlAttributes={{"lang": "ru", "amp": undefined}} // amp takes no value
@@ -48,7 +45,7 @@ export default function ({data}) {
                 {"property": "og:image", "content": pageImage}
             ]}
         />
-        <Header title={'Наши работы'} image={"/assets/images/22-1_11.jpg"} data={data.allContactsYaml}></Header>
+        <Header title={'Наши работы'} image={data.allOurworksYaml.edges[0].node.image} data={data.allContactsYaml}></Header>
         <Container>
             <div className={offersStyles.container} style={{marginBottom: '20px'}}>
                 <Card title={'Букеты'} linkTo={"/our-works/bouquets"} image={'/assets/images/works/1.jpg'}></Card>
@@ -79,6 +76,16 @@ export const pageQuery = graphql`
                     lat
                     lon
                     worktime
+                }
+            }
+        },
+        allOurworksYaml {
+            edges {
+                node {
+                    title
+                    description
+                    seoimage
+                    image
                 }
             }
         }
