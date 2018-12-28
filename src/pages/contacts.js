@@ -50,43 +50,42 @@ export default function ({ data }) {
                     Отправьте нам заявку либо позвоните по телефонам, указанным ниже. Мы с удовольствием ответим на все Ваши вопросы и расскажем все подробности про наши услуги.
                 </p>
             </Container>
-            <Container>
+            <div className={styles.contactBox}>
+                <div className={styles.places}>
                 <h4>Контакты</h4>
                 <p>
-                    <a href="mailto:rozaazora-shop@yandex.by">rozaazora-shop@yandex.by</a>
+                    Беларусь, Минск,<br />{data.allContactsYaml.edges[0].node.location}
                     <br />
                 
                     <br />
                     <a href={"tel:" + data.allContactsYaml.edges[0].node.phone1.replace(/\s/g, '')}>{data.allContactsYaml.edges[0].node.phone1}</a><br />
                     <a href={"tel:" + data.allContactsYaml.edges[0].node.phone2.replace(/\s/g, '')}>{data.allContactsYaml.edges[0].node.phone2}</a>
                 </p>
-            </Container>
+                </div>
+                <div className={styles.location}>
+                <YMaps
+                        query={{
+                        ns: 'use-load-option',
+                        load:
+                            'Map,control.ZoomControl,control.FullscreenControl',
+                        }}
+                    >
+                    <Map className={styles.map} defaultState={state}>
+                    <Placemark
+                        defaultGeometry={state.center}
+                        properties={{
+                            balloonContentBody:
+                            'Салон цветов "Роза Азора"',
+                        }}
+                    />
+                    </Map>
+                </YMaps>
+                </div>
+            </div>
             <Container>
                 <ContactForm />
             </Container>
-            <Container>
-                <h4>Адрес</h4>
-                <p>
-                    Беларусь, Минск, {data.allContactsYaml.edges[0].node.location}
-                </p>
-            </Container>
-            <YMaps
-                query={{
-                ns: 'use-load-option',
-                load:
-                    'Map,control.ZoomControl,control.FullscreenControl',
-                }}
-            >
-            <Map className={styles.map} defaultState={state}>
-              <Placemark
-                defaultGeometry={state.center}
-                properties={{
-                    balloonContentBody:
-                    'Салон цветов "Роза Азора"',
-                }}
-            />
-            </Map>
-          </YMaps>
+            
         <Footer data={data.allContactsYaml}></Footer>
     </main>
 )

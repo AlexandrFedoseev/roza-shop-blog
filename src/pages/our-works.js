@@ -47,7 +47,7 @@ export default function ({data}) {
         />
         <Header title={'Наши работы'} image={data.allOurworksYaml.edges[0].node.image} data={data.allContactsYaml}></Header>
         <Container>
-            <div className={offersStyles.container} style={{marginBottom: '20px'}}>
+            <div className={offersStyles.container} style={{marginBottom: '20px', paddingTop: "3.64rem"}}>
             {
                 data.allMarkdownRemark.edges.map((edge, i) => {
                     return (<Card title={edge.node.frontmatter.title} linkTo={edge.node.frontmatter.path} image={edge.node.frontmatter.slugimage} key={i} />) 

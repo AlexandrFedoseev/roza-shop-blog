@@ -6,3 +6,25 @@
 .first-container {
     padding-top: 3.64rem;
 }
+
+.contact-box {
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    div {
+
+        @media screen and (min-width: 900px) {
+            float: left;
+            width: 50%;
+        }
+    }
+
+    .places {
+        padding-left: 80px;
+        box-sizing: border-box;
+    }
+}
