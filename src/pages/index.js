@@ -72,6 +72,7 @@ export const pageQuery = graphql`
     query {
         allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___title] }
+            filter: { frontmatter: { path: {regex: "/services/"}  } }
             limit: 6
         ) {
             edges {

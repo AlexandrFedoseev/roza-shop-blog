@@ -48,21 +48,40 @@ export default function ({data}) {
         <Header title={'Наши работы'} image={data.allOurworksYaml.edges[0].node.image} data={data.allContactsYaml}></Header>
         <Container>
             <div className={offersStyles.container} style={{marginBottom: '20px'}}>
-                <Card title={'Букеты'} linkTo={"/our-works/bouquets"} image={'/assets/images/works/1.jpg'}></Card>
-                <Card title={'Композиции'} linkTo={"/our-works/compositions"} image={'/assets/images/works/2.jpg'}></Card>
-                <Card title={'Стабилизированные цветы'} linkTo={"/our-works/stabilized-flowers"} image={'/assets/images/works/3.jpg'}></Card>
-                <Card title={'Живые стены'} linkTo={"/our-works/living-walls"} image={'/assets/images/works/4.jpg'}></Card>
-                <Card title={'Оформление мероприятий'} linkTo={"/our-works/event-design"} image={'/assets/images/works/5.jpg'}></Card>
-                <Card title={'Новогодняя флористика'} linkTo={"/our-works/christmas-floristics"} image={'/assets/images/works/6.jpg'}></Card>
+            {
+                data.allMarkdownRemark.edges.map((edge, i) => {
+                    return (<Card title={edge.node.frontmatter.title} linkTo={edge.node.frontmatter.path} image={edge.node.frontmatter.slugimage} key={i} />) 
+                })
+            }
             </div>
         </Container>
         <Footer data={data.allContactsYaml}></Footer>
     </main>)
 }
 
+// <Card title={'Букеты'} linkTo={"/our-works/bouquets"} image={'/assets/images/works/1.jpg'}></Card>
+// <Card title={'Композиции'} linkTo={"/our-works/compositions"} image={'/assets/images/works/2.jpg'}></Card>
+// <Card title={'Стабилизированные цветы'} linkTo={"/our-works/stabilized-flowers"} image={'/assets/images/works/3.jpg'}></Card>
+// <Card title={'Живые стены'} linkTo={"/our-works/living-walls"} image={'/assets/images/works/4.jpg'}></Card>
+// <Card title={'Оформление мероприятий'} linkTo={"/our-works/event-design"} image={'/assets/images/works/5.jpg'}></Card>
+// <Card title={'Новогодняя флористика'} linkTo={"/our-works/christmas-floristics"} image={'/assets/images/works/6.jpg'}></Card>
 
 export const pageQuery = graphql`
     query {
+        allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___title] }
+            filter: { frontmatter: { path: {regex: "/our-works/"}  } }
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        path,
+                        title,
+                        slugimage
+                    }
+                }
+            }
+        },
         allContactsYaml {
             edges {
                 node {

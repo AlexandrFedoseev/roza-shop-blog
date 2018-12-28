@@ -3,7 +3,30 @@ const path = require("path")
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const servicePostTemplate = path.resolve(`src/templates/serviceTemplate.js`)
+  const servicePostTemplate = path.resolve(`src/templates/serviceTemplate.js`);
+  const workPostTemplate = path.resolve(`src/templates/worksTemplate.js`);
+
+  function createServicePage(node) {
+    createPage({
+      path: node.frontmatter.path,
+      image: node.frontmatter.image,
+      title: node.frontmatter.title,
+      info: node.frontmatter.info,
+      component: servicePostTemplate,
+      context: {},
+    })
+  }
+
+  function createWorksPage(node) {
+    createPage({
+      path: node.frontmatter.path,
+      image: node.frontmatter.image,
+      title: node.frontmatter.title,
+      info: node.frontmatter.info,
+      component: workPostTemplate,
+      context: {},
+    })
+  }
 
   return graphql(`
     {
@@ -29,14 +52,11 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        image: node.frontmatter.image,
-        title: node.frontmatter.title,
-        info: node.frontmatter.info,
-        component: servicePostTemplate,
-        context: {}, // additional data can be passed via context
-      })
+      if (node.frontmatter.path.indexOf('our-works') !== -1) {
+        createWorksPage(node);
+      } else {
+        createServicePage(node);
+      }
     })
   })
 }
