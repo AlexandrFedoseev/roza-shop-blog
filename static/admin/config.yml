@@ -46,7 +46,7 @@ collections:
           - {label: "Фон заголовка", name: image, widget: image}
       - label: "Контакты"
         name: "contacts"
-        file: "site/content/contacts.yml"
+        file: "site/content/contacts/contacts.yml"
         fields:
           - {label: "СЕО Заголовок", name: title, widget: string}
           - {label: "СЕО Описание", name: description, widget: text}
