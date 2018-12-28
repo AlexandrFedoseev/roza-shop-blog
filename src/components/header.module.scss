@@ -17,24 +17,29 @@
     & > div {
         padding: 16px 0;
         white-space: nowrap;
-        width: 100%;
+        width: calc((100% - 44px - 198px - 40px) / 2);
         &.location .block-content {
             display: none;
         }
         &.phones .block-content {
             display: none;
         }
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: 600px) {
             &.phones {
-                width: calc((100% - 44px - 198px - 40px));
+                width: calc((100% - 44px - 198px - 40px - 60px));
+            }
+            &.location {
+                width: 60px;
             }
             &.phones .block-content {
-                display: block;
+                display: inline-block;
+                vertical-align: middle;
             }
         }
         @media screen and (min-width: 900px) {
             &.location .block-content {
-                display: block;
+                display: inline-block;
+                vertical-align: middle;
             }
             &.phones, &.location {
                 width: calc((100% - 44px - 198px) / 2);
@@ -45,14 +50,22 @@
         .center-in-box {
             display: inline-block;
             font-size: 16px;
+            &::before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 0px;
+                height: 58px;
+            }
         }
         .icon {
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 auto;
             width: 40px;
             height: 40px;
-            padding: 10px 0;
+            padding: 0;
             box-sizing: content-box;
-            float: left;
             transform: rotate(180deg);
         }
         .block-content {
