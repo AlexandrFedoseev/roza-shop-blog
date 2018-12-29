@@ -61,7 +61,7 @@ export default function(props) {
     <Section linkTo={"/contacts"} title={'Остались вопросы?'}>
         <ContactForm></ContactForm>
     </Section>
-    <Section linkTo={"/contacts"} title={'Присоединяйтесь к нам в instagram'} />
+    <Section linkTo={"https://www.instagram.com/rozaazora/"} title={'Присоединяйтесь к нам в instagram'} />
     <InstagramGallery images={props.data.allHomeYaml.edges[0].node.instagram} />
     <Footer data={props.data.allContactsYaml}></Footer>
     </main>
