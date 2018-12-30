@@ -43,7 +43,7 @@ export default function Template({
   />
         <Header title={frontmatter.title} image={frontmatter.image} data={data.allContactsYaml}></Header>
         <Container>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div dangerouslySetInnerHTML={{ __html: html }} style={{paddingTop: "3.64rem"}} />
         </Container>
         <Container>
           <ContactForm></ContactForm>
