@@ -47,7 +47,7 @@ export default function ({ data }) {
         <Header title={'Контакты'}  image={data.allContactsYaml.edges[0].node.image} data={data.allContactsYaml}></Header>
             <Container>
                 <p className={styles.firstContainer}>
-                    Отправьте нам заявку либо позвоните по телефонам, указанным ниже. Мы с удовольствием ответим на все Ваши вопросы и расскажем все подробности про наши услуги.
+                    Позвоните нам! И мы с удовольствием ответим на все Ваши вопросы и расскажем все подробности про наши услуги.
                 </p>
             </Container>
             <div className={styles.contactBox}>
